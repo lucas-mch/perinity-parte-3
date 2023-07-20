@@ -2,10 +2,21 @@ package dev.lucasmachado.perinity;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static dev.lucasmachado.perinity.desafio04.*;
 import static org.junit.Assert.assertArrayEquals;
 
 public class desafio04Test {
+
+    @Test
+    public void testBubbleSort() {
+        Integer[] arr1 = {9, 7 ,6 , 2, 42, 12, 1};
+        Integer[] expected = {1, 2, 6, 7, 9, 12, 42};
+        assertArrayEquals(bubbleSort(arr1), expected);
+        assertArrayEquals(bubbleSort(arr1), Arrays.stream(arr1).sorted().toArray());
+
+    }
     @Test
     public void testMergeAndSortEmptyArrays() {
         Integer[] arr1 = {};
