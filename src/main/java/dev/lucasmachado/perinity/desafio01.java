@@ -14,7 +14,7 @@ public class desafio01 {
         Integer y = scannerInteger("y");
         Integer z = (x * y) + 5;
         char resposta = getResposta(z);
-        System.out.println(resposta);
+        System.out.println("z, " + resposta);
     }
 
     //for unit tests
